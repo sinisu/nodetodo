@@ -1,3 +1,4 @@
+const { Timestamp } = require("mongodb");
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
@@ -8,7 +9,7 @@ const taskSchema = Schema({
     },
     isComplete:{
         type:Boolean,
-        required:true
+        required:false
     },
 },{timestamps:true})
 // timestamps : 자료 생성 날짜를 넣어줌
