@@ -22,6 +22,8 @@ const userSchema = Schema({
 userSchema.methods.toJSON = function () {
     const obj = this._doc
     delete obj.password;
+    delete obj.updatedAt;
+    delete obj.__v;
     return obj;
     // 정보를 호출해 올 때 doc의 정보만 보여주고 password를 항상 삭제함
 }
