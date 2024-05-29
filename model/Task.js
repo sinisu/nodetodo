@@ -11,6 +11,11 @@ const taskSchema = Schema({
         type:Boolean,
         required:false
     },
+    author:{
+        type:Schema.Types.ObjectId,
+        required:true,
+        ref:"User"
+    },
 },{timestamps:true})
 // timestamps : 자료 생성 날짜를 넣어줌
 
